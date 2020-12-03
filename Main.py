@@ -113,7 +113,7 @@ if detected == 1:
         thre_mor = cv2.morphologyEx(imgThresh,cv2.MORPH_DILATE,kerel3)
         cont,hier = cv2.findContours(thre_mor,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE) 
 
-        cv2.imshow(str(n+20),thre_mor)
+        #cv2.imshow(str(n+20),thre_mor)
         cv2.drawContours(roi, cont, -1, (100, 255, 255), 2) #Vẽ contour các kí tự trong biển số
 
         ##################### Lọc vùng kí tự #################

@@ -27,7 +27,7 @@ def main():
                                       11,                                   # size of a pixel neighborhood used to calculate threshold value
                                       2)                                    # constant subtracted from the mean or weighted mean
 
-    cv2.imshow("imgThresh", imgThresh)      # show threshold image for reference
+    #cv2.imshow("imgThresh", imgThresh)      # show threshold image for reference
 
     imgThreshCopy = imgThresh.copy()        # make a copy of the thresh image, this in necessary b/c findContours modifies the image
 
@@ -62,10 +62,10 @@ def main():
             imgROI = imgThresh[intY:intY+intH, intX:intX+intW]                                  # crop char out of threshold image
             imgROIResized = cv2.resize(imgROI, (RESIZED_IMAGE_WIDTH, RESIZED_IMAGE_HEIGHT))     # resize image, this will be more consistent for recognition and storage
 
-            cv2.imshow("imgROI", imgROI)                    # show cropped out char for reference
-            cv2.imshow("imgROIResized", imgROIResized)      # show resized image for reference
+            #cv2.imshow("imgROI", imgROI)                    # show cropped out char for reference
+            #cv2.imshow("imgROIResized", imgROIResized)      # show resized image for reference
             
-            cv2.imshow("training_numbers.png", imgTrainingNumbers)      # show training numbers image, this will now have red rectangles drawn on it
+            #cv2.imshow("training_numbers.png", imgTrainingNumbers)      # show training numbers image, this will now have red rectangles drawn on it
 
             intChar = cv2.waitKey(0)                     # get key press
 
